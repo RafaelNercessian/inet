@@ -1,0 +1,50 @@
+# WordPress core files
+wp-admin/
+wp-includes/
+wp-content/plugins/
+wp-content/themes/twenty*/
+
+# Configuration files
+wp-config.php
+wp-config-sample.php
+
+# Uploads directory
+wp-content/uploads/
+
+# Upgrade files
+wp-content/upgrade/
+
+# Log files
+*.log
+
+# Cache files
+wp-content/cache/
+
+# Backup files
+*~
+*.bak
+
+# WordPress specific files
+.htaccess
+license.txt
+readme.html
+
+# Node modules
+node_modules/
+
+# Compiled assets
+wp-content/themes/*/dist/
+
+# Environment files
+.env
+.env.*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+.idea/
+.vscode/

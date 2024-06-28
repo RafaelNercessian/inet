@@ -1,0 +1,456 @@
+
+/* Bootstrap overrides */
+@import '_variables.scss';
+
+@import 'bootstrap-5.2.3/_functions.scss';
+@import 'bootstrap-5.2.3/_variables.scss';
+@import 'bootstrap-5.2.3/_mixins.scss';
+@import 'bootstrap-5.2.3/_maps.scss';
+@import 'bootstrap-5.2.3/_utilities.scss';
+@import 'bootstrap-5.2.3/utilities/_api.scss';
+@import 'bootstrap-5.2.3/_buttons.scss';
+@import 'bootstrap-5.2.3/_reboot.scss';
+@import 'bootstrap-5.2.3/bootstrap-grid.scss';
+
+
+
+/* Setup */
+body {
+  position:relative;
+  color: #111;
+  font-family: $font-family-base;         /* Could use: $font-family-google set in _variables.scss */
+  font-weight: $font-weight-base;  		  /* Defaults to 400 */
+  font-size: $font-size-base;      		  /* Never set this lower than 1rem (16px); on Mobile */
+  margin: 0;
+  line-height: $line-height-base;		  /* Default: 1.25 */
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+}
+
+#masthead {
+    .logo a {
+      display: inline-block !important;
+    }
+}
+
+
+/* Fluid typography with Clamp - Set your min/max in _variables.scss */
+h1, .h1 {
+    font-size: clamp(($h1-min/16) + 0rem, calc(#{$h1-min + "px"} + (#{$h1-max} - #{$h1-min}) * ((100vw - 320px) / (1920 - 320))), ($h1-max/16) + 0rem);
+    line-height: clamp(($h1-min/16) + 0rem, calc(#{$h1-min + "px"} + (#{$h1-max} - #{$h1-min}) * ((100vw - 320px) / (1920 - 320))), ($h1-max/16) + 0rem);
+}
+h2, .h2 {
+    font-size: clamp(($h2-min/16) + 0rem, calc(#{$h2-min + "px"} + (#{$h2-max} - #{$h2-min}) * ((100vw - 320px) / (1920 - 320))), ($h2-max/16) + 0rem);
+    line-height: clamp(($h2-min/16) + 0rem, calc(#{$h2-min + "px"} + (#{$h2-max} - #{$h2-min}) * ((100vw - 320px) / (1920 - 320))), ($h2-max/16) + 0rem);
+}
+h3, .h3 {
+    font-size: clamp(($h3-min/16) + 0rem, calc(#{$h3-min + "px"} + (#{$h3-max} - #{$h3-min}) * ((100vw - 320px) / (1920 - 320))), ($h3-max/16) + 0rem);
+    line-height: clamp(($h3-min/16) + 0rem, calc(#{$h3-min + "px"} + (#{$h3-max} - #{$h3-min}) * ((100vw - 320px) / (1920 - 320))), ($h3-max/16) + 0rem);
+}
+h4, .h4 {
+    font-size: clamp(($h4-min/16) + 0rem, calc(#{$h4-min + "px"} + (#{$h4-max} - #{$h4-min}) * ((100vw - 320px) / (1920 - 320))), ($h4-max/16) + 0rem);
+    line-height: clamp(($h4-min/16) + 0rem, calc(#{$h4-min + "px"} + (#{$h4-max} - #{$h4-min}) * ((100vw - 320px) / (1920 - 320))), ($h4-max/16) + 0rem);
+}
+h5, .h5 {
+    font-size: clamp(($h5-min/16) + 0rem, calc(#{$h5-min + "px"} + (#{$h5-max} - #{$h5-min}) * ((100vw - 320px) / (1920 - 320))), ($h5-max/16) + 0rem);
+    line-height: clamp(($h5-min/16) + 0rem, calc(#{$h5-min + "px"} + (#{$h5-max} - #{$h5-min}) * ((100vw - 320px) / (1920 - 320))), ($h5-max/16) + 0rem);
+}
+h6, .h6 {
+    font-size: clamp(($h6-min/16) + 0rem, calc(#{$h6-min + "px"} + (#{$h6-max} - #{$h6-min}) * ((100vw - 320px) / (1920 - 320))), ($h6-max/16) + 0rem);
+    line-height: clamp(($h6-min/16) + 0rem, calc(#{$h6-min + "px"} + (#{$h6-max} - #{$h6-min}) * ((100vw - 320px) / (1920 - 320))), ($h6-max/16) + 0rem);
+}
+
+
+h1,h2,h3,h4,h5,h6 {  
+    margin:0 0 1rem 0;
+} 
+
+p { 
+    margin-bottom:1.5em;
+    &:last-of-type {
+        margin-bottom:0;
+    }
+}    
+
+
+img, picture, picture * {
+	/* Fixes srcset image widths */
+    display:block;
+    max-width: 100%;
+    height: auto;
+}
+
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+
+/* easy object fit, just set a height on .image-container */
+.image-container {
+    
+    picture {
+        display: flex !important;
+        height: 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+
+    img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+    }
+    
+}
+
+
+.inet-contact-form {
+    .error-message {
+        display:none; /* js will show it if there are errors */
+        margin-top: 1em;
+        padding: 0.75em 1rem;
+        border: 1px solid #dc3545;
+        background:white;
+        border-radius: 4px;
+        color: #535353;
+    }    
+}
+
+
+/*-------------------------------------------
+## Standard icons
+--------------------------------------------*/
+
+@font-face {
+  font-family: 'standard-icons';
+  src: url('fonts/standard-icons/icomoon.ttf') format('truetype'),
+    url('fonts/standard-icons/icomoon.woff') format('woff'),
+    url('fonts/standard-icons/icomoon.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i[class^="icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'standard-icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-left:before {
+  content: "\e900";
+}
+.icon-chevron-right:before {
+  content: "\e901";
+}
+.icon-menu:before {
+  content: "\e902";
+}
+.icon-x:before {
+  content: "\e903";
+}
+.icon-clock:before {
+  content: "\e904";
+}
+
+
+
+/*--------------------------------------------------------------
+## Desktop Nav
+--------------------------------------------------------------*/
+.navigation {
+	
+    position:relative;
+    
+	ul { 
+		
+        list-style:none; 
+		padding-left:0; 
+        margin: 0;
+        
+        .sub-menu { display:none; }
+
+		> li {
+            
+			display: inline-block;
+			padding:0.5em 1rem;
+            
+            a { 
+                font-size:17px;
+                font-weight:bold;
+                color:black;
+                
+                
+                &:hover { 
+                    color:$primary !important; 
+                }
+            }
+            
+            &.bold {
+                a {
+                    color:white !important;
+                    &:hover { text-decoration:underline; }
+                }
+            }
+            
+            &:last-child {
+                padding-right:0 !important;
+            }
+            
+            &.menu-item-has-children {
+                
+                > a:after {
+                    font-family:"standard-icons";
+                    content: "\e901";
+                    display: inline-block;
+                    color: #DBDBDB;
+                    font-weight: normal;
+                    transform: rotate(90deg);
+                    position:relative;
+                    top: 2px;
+                    left: 3px;
+                }
+                
+            }
+
+		}/* end first level li */
+        
+        
+        li.menu-item-has-children:not(.megamenu) {
+            position:relative;
+        }
+        
+        li.menu-item-has-children:not(.megamenu):hover > .sub-menu {
+            
+            display: block;
+            position: absolute;
+            margin-top:0.5em;
+            width: 250px;
+            left: 0;
+            padding: 0.75em 0;
+            background: white;
+            border-radius: 5px;
+            z-index: 1000;
+            
+            > li {
+                display:block;
+                padding:4px 1rem;
+                a { 
+                    font-size:16px !important; 
+                    font-weight:normal;
+                    color:#434343; 
+                }
+                a:hover { 
+                    color: $primary !important;
+                }
+            }
+            
+        }
+        
+        
+        li.menu-item-has-children.megamenu > .sub-menu {
+            position: absolute;
+            width: 100%;
+            left: 0;
+            padding: 0.75em 0;
+            background: white;
+            border-radius: 5px;
+            
+            li > a {
+                color:$primary;
+                &:hover { color:$primary !important; }
+            }
+            
+        }
+        
+        li.menu-item-has-children.megamenu:hover > .sub-menu {
+            display: block;
+            
+        }
+		
+	}
+
+
+	
+}
+
+
+/*--------------------------------------------------------------
+## Mobile Navs
+--------------------------------------------------------------*/
+.mobile-nav-toggle {
+    
+    /*display:none;*/
+    cursor:pointer;
+    color: black;
+    
+    i {
+        position: relative;
+        font-size: 63px;
+        top:3px;
+    }
+    
+    @media screen and (max-width:$sm) {
+        display:block;
+    }
+
+    
+}
+
+
+#menu-mobile-nav {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+ 
+
+.mobile-nav-container {
+
+    right: -285px;
+    top:0;
+    bottom:0;
+    position: fixed;
+    width: 285px;
+    background: #f9f9f9;
+	overflow-y:auto;
+    z-index: 1000;
+
+    .close {
+        
+        span {
+            cursor:pointer;
+            font-size:14px; 
+            display:inline-block;
+            padding:3px 7px;
+            border-radius:3px;
+            background:#ECECEC;
+        }
+        
+        i {
+            color:$primary;
+            font-size:16px;
+            position: relative;
+            top: 0px;
+            right: -5px;
+        }
+    }
+    
+}
+ 
+
+
+
+/*--------------------------------------------------------------
+## Breadcrumb
+--------------------------------------------------------------*/
+.breadcrumb { 
+	background:#f3f3f3;
+    
+    p {
+        margin: 0 !important;
+        padding: 10px 0;
+    }
+    
+}
+
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+  color: $primary;
+  text-decoration:none;
+  transition: color 110ms ease-in-out;
+}
+
+a:visited { color: $primary; }
+a:focus { text-decoration: none; }
+a:hover,
+a:active {
+  color: $secondary;
+}
+
+.btn { text-decoration:none; margin-top:1em; }
+a:visited.btn.btn-primary { color:white; }
+
+/* Alignments */
+.alignleft {
+  float: left;
+  margin-right: 1rem;
+}
+
+.alignright {
+  float: right;
+  margin-left: 1rem;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+    
+    picture, img {
+        margin:0 auto;
+    }
+    figcaption { text-align:center; }
+    
+}
+
+
+@media screen and (max-width:1023px) {
+    
+    .alignleft,
+    .alignright,
+    .aligncenter {
+        float:none;
+        display:block !important;
+        margin:1em auto;
+    }
+    
+}
+
+hr {
+	border-top: 1px solid #ddd;
+    border-left:none;
+    border-right:none;
+	border-bottom: none;
+	margin: 2em 0;
+}
+
+
+/*** Misc ***/
+
+figcaption {
+    color: #c3c3c3;
+    font-style: italic;
+}
+
+.entry-meta .sep {
+    margin:0 0.25em;
+}

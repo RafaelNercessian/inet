@@ -1,0 +1,65 @@
+
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+/* Added fallbacks to help with CLS, feel free to remove if it doesn't help on your project */
+$font-family-google: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+$font-weight-base: 400;
+$font-size-base:   1rem; // Assumes the browser default, typically `16px`
+$line-height-base: 1.25;
+
+/* Colours */
+$primary: #0075AF;
+$secondary: #123D96;
+
+
+/* Fluid heading sizes - set your min/max sizes and you're done! */
+$h1-min: 50;  $h1-max: 60;
+$h2-min: 40;  $h2-max: 50;
+$h3-min: 30;  $h3-max: 40;
+$h4-min: 22;  $h4-max: 30;
+$h5-min: 18;  $h5-max: 22;
+$h6-min: 17;  $h6-max: 19;
+
+
+
+/* Some device sizes to use with min-width */
+$xs: 0;
+$sm: 641px;
+$md: 769px;
+$lg: 1025px;
+$xl: 1141px;
+
+/* adjusted breakpoints for above */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 641px,
+  md: 769px,
+  lg: 1025px,
+  xl: 1141px
+);
+
+/* 100% widths look better than "Snapping" IMO */
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 100%,
+  xl: 1140px
+);
+
+
+/* Utility */
+$radius: 5px;
+
+/* Additional Spacers -- don't think you'll need more than 7, but if you do -- maybe just use a custom class  :)  */
+$spacer: 1em;  //Assumes browser default of 16px;
+$spacers: (
+0: 0,
+1: ($spacer * 1),
+2: ($spacer * 2),
+3: ($spacer * 3),
+4: ($spacer * 4),
+5: ($spacer * 5),
+6: ($spacer * 6),
+7: ($spacer * 7),
+);
