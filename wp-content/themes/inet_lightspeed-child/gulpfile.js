@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 
 // Requires the gulp-sass plugin
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 
 gulp.task('sass', function() {
 return gulp.src('scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs

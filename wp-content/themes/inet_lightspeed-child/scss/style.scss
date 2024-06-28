@@ -40,28 +40,28 @@ html {
 
 /* Fluid typography with Clamp - Set your min/max in _variables.scss */
 h1, .h1 {
-    font-size: clamp(($h1-min/16) + 0rem, calc(#{$h1-min + "px"} + (#{$h1-max} - #{$h1-min}) * ((100vw - 320px) / (1920 - 320))), ($h1-max/16) + 0rem);
-    line-height: clamp(($h1-min/16) + 0rem, calc(#{$h1-min + "px"} + (#{$h1-max} - #{$h1-min}) * ((100vw - 320px) / (1920 - 320))), ($h1-max/16) + 0rem);
+    font-size: clamp((($h1-min/16)*1rem) + 0rem, calc(#{$h1-min + "px"} + (#{$h1-max} - #{$h1-min}) * ((100vw - 320px) / (1920 - 320))), (($h1-max/16)*1rem) + 0rem);
+    line-height: clamp((($h1-min/16)*1rem) + 0rem, calc(#{$h1-min + "px"} + (#{$h1-max} - #{$h1-min}) * ((100vw - 320px) / (1920 - 320))), (($h1-max/16)*1rem) + 0rem);
 }
 h2, .h2 {
-    font-size: clamp(($h2-min/16) + 0rem, calc(#{$h2-min + "px"} + (#{$h2-max} - #{$h2-min}) * ((100vw - 320px) / (1920 - 320))), ($h2-max/16) + 0rem);
-    line-height: clamp(($h2-min/16) + 0rem, calc(#{$h2-min + "px"} + (#{$h2-max} - #{$h2-min}) * ((100vw - 320px) / (1920 - 320))), ($h2-max/16) + 0rem);
+    font-size: clamp((($h2-min/16)*1rem) + 0rem, calc(#{$h2-min + "px"} + (#{$h2-max} - #{$h2-min}) * ((100vw - 320px) / (1920 - 320))), (($h2-max/16)*1rem) + 0rem);
+    line-height: clamp((($h2-min/16)*1rem) + 0rem, calc(#{$h2-min + "px"} + (#{$h2-max} - #{$h2-min}) * ((100vw - 320px) / (1920 - 320))), (($h2-max/16)*1rem) + 0rem);
 }
 h3, .h3 {
-    font-size: clamp(($h3-min/16) + 0rem, calc(#{$h3-min + "px"} + (#{$h3-max} - #{$h3-min}) * ((100vw - 320px) / (1920 - 320))), ($h3-max/16) + 0rem);
-    line-height: clamp(($h3-min/16) + 0rem, calc(#{$h3-min + "px"} + (#{$h3-max} - #{$h3-min}) * ((100vw - 320px) / (1920 - 320))), ($h3-max/16) + 0rem);
+    font-size: clamp((($h3-min/16)*1rem) + 0rem, calc(#{$h3-min + "px"} + (#{$h3-max} - #{$h3-min}) * ((100vw - 320px) / (1920 - 320))), (($h3-max/16)*1rem) + 0rem);
+    line-height: clamp((($h3-min/16)*1rem) + 0rem, calc(#{$h3-min + "px"} + (#{$h3-max} - #{$h3-min}) * ((100vw - 320px) / (1920 - 320))), (($h3-max/16)*1rem) + 0rem);
 }
 h4, .h4 {
-    font-size: clamp(($h4-min/16) + 0rem, calc(#{$h4-min + "px"} + (#{$h4-max} - #{$h4-min}) * ((100vw - 320px) / (1920 - 320))), ($h4-max/16) + 0rem);
-    line-height: clamp(($h4-min/16) + 0rem, calc(#{$h4-min + "px"} + (#{$h4-max} - #{$h4-min}) * ((100vw - 320px) / (1920 - 320))), ($h4-max/16) + 0rem);
+    font-size: clamp((($h4-min/16)*1rem) + 0rem, calc(#{$h4-min + "px"} + (#{$h4-max} - #{$h4-min}) * ((100vw - 320px) / (1920 - 320))), (($h4-max/16)*1rem) + 0rem);
+    line-height: clamp((($h4-min/16)*1rem) + 0rem, calc(#{$h4-min + "px"} + (#{$h4-max} - #{$h4-min}) * ((100vw - 320px) / (1920 - 320))), (($h4-max/16)*1rem) + 0rem);
 }
 h5, .h5 {
-    font-size: clamp(($h5-min/16) + 0rem, calc(#{$h5-min + "px"} + (#{$h5-max} - #{$h5-min}) * ((100vw - 320px) / (1920 - 320))), ($h5-max/16) + 0rem);
-    line-height: clamp(($h5-min/16) + 0rem, calc(#{$h5-min + "px"} + (#{$h5-max} - #{$h5-min}) * ((100vw - 320px) / (1920 - 320))), ($h5-max/16) + 0rem);
+    font-size: clamp((($h5-min/16)*1rem) + 0rem, calc(#{$h5-min + "px"} + (#{$h5-max} - #{$h5-min}) * ((100vw - 320px) / (1920 - 320))), (($h5-max/16)*1rem) + 0rem);
+    line-height: clamp((($h5-min/16)*1rem) + 0rem, calc(#{$h5-min + "px"} + (#{$h5-max} - #{$h5-min}) * ((100vw - 320px) / (1920 - 320))), (($h5-max/16)*1rem) + 0rem);
 }
 h6, .h6 {
-    font-size: clamp(($h6-min/16) + 0rem, calc(#{$h6-min + "px"} + (#{$h6-max} - #{$h6-min}) * ((100vw - 320px) / (1920 - 320))), ($h6-max/16) + 0rem);
-    line-height: clamp(($h6-min/16) + 0rem, calc(#{$h6-min + "px"} + (#{$h6-max} - #{$h6-min}) * ((100vw - 320px) / (1920 - 320))), ($h6-max/16) + 0rem);
+    font-size: clamp((($h6-min/16)*1rem) + 0rem, calc(#{$h6-min + "px"} + (#{$h6-max} - #{$h6-min}) * ((100vw - 320px) / (1920 - 320))), (($h6-max/16)*1rem) + 0rem);
+    line-height: clamp((($h6-min/16)*1rem) + 0rem, calc(#{$h6-min + "px"} + (#{$h6-max} - #{$h6-min}) * ((100vw - 320px) / (1920 - 320))), (($h6-max/16)*1rem) + 0rem);
 }
 
 
@@ -161,21 +161,102 @@ i[class^="icon-"] {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src:
+          url('fonts/icomoon.ttf?sloaam') format('truetype'),
+          url('fonts/icomoon.woff?sloaam') format('woff'),
+          url('fonts/icomoon.svg?sloaam#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .icon-chevron-left:before {
   content: "\e900";
 }
 .icon-chevron-right:before {
   content: "\e901";
 }
-.icon-menu:before {
+.icon-cart:before {
   content: "\e902";
 }
-.icon-x:before {
+.icon-wine-glass:before {
   content: "\e903";
 }
-.icon-clock:before {
+.icon-close:before {
   content: "\e904";
 }
+.icon-date:before {
+  content: "\e905";
+}
+.icon-email:before {
+  content: "\e906";
+}
+.icon-facebook:before {
+  content: "\e907";
+}
+.icon-home:before {
+  content: "\e908";
+}
+.icon-instagram:before {
+  content: "\e909";
+}
+.icon-long-arrow-right:before {
+  content: "\e90a";
+}
+.icon-twitter:before {
+  content: "\e90b";
+}
+.icon-map-pin:before {
+  content: "\e90c";
+}
+.icon-menu:before {
+  content: "\e90d";
+}
+.icon-minus:before {
+  content: "\e90e";
+}
+.icon-pinterest:before {
+  content: "\e90f";
+}
+.icon-plus:before {
+  content: "\e910";
+}
+.icon-skype:before {
+  content: "\e911";
+}
+.icon-time:before {
+  content: "\e912";
+}
+.icon-vk:before {
+  content: "\e913";
+}
+.icon-whats-app:before {
+  content: "\e914";
+}
+.icon-search:before {
+  content: "\e915";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
+
 
 
 

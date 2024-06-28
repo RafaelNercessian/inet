@@ -9,18 +9,26 @@ $font-size-base:   1rem; // Assumes the browser default, typically `16px`
 $line-height-base: 1.25;
 
 /* Colours */
-$primary: #0075AF;
-$secondary: #123D96;
+$primary: #3B3838;
+$secondary: #7A2E09;
+$white-1: #F8F8F5;
+$white-2: #F3F0E9;
+$black-2: #302921;
 
 
 /* Fluid heading sizes - set your min/max sizes and you're done! */
-$h1-min: 50;  $h1-max: 60;
-$h2-min: 40;  $h2-max: 50;
-$h3-min: 30;  $h3-max: 40;
-$h4-min: 22;  $h4-max: 30;
-$h5-min: 18;  $h5-max: 22;
-$h6-min: 17;  $h6-max: 19;
-
+$h1-min: 40;
+$h1-max: 100;
+$h2-min: 40;
+$h2-max: 60;
+$h3-min: 24;
+$h3-max: 40;
+$h4-min: 20;
+$h4-max: 24;
+$h5-min: 18;
+$h5-max: 22;
+$h6-min: 17;
+$h6-max: 19;
 
 
 /* Some device sizes to use with min-width */
