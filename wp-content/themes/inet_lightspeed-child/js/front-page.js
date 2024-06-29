@@ -1,22 +1,23 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const welcomeSection = document.querySelector('.welcome');
-
-    let lastScrollTop = 0;
-    const scrollThreshold = 50;
-
-    window.addEventListener('scroll', function() {
-        const st = window.pageYOffset || document.documentElement.scrollTop;
-        if (st > lastScrollTop) {
-            // Scrolling down
-            if (st > scrollThreshold) {
-                welcomeSection.classList.add('visible');
-            }
-        } else {
-            if (st < scrollThreshold) {
-                welcomeSection.classList.remove('visible');
+jQuery(document).ready(function($){
+    var owl = $('.featured-carousel');
+    owl.owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        responsive:{
+            0:{
+                items: 1
+            },
+            600:{
+                items: 2
+            },
+            1000:{
+                items: 3
             }
         }
+    });
 
-        lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-    }, false);
+    owl.trigger('play.owl.autoplay', [1000]);
 });

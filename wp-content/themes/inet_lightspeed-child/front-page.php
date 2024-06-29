@@ -13,6 +13,8 @@ get_header(); ?>
                         get_template_part('partials/hero', $layout);
                     } elseif ($layout == 'welcome_cork_vine') {
                         get_template_part('partials/welcome_cork_vine', $layout);
+                    } elseif($layout == 'features_brands'){
+                        get_template_part('partials/features-brands', $layout);
                     }
                 endwhile;
             endif;

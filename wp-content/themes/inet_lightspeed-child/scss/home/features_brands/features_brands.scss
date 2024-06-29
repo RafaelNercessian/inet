@@ -1,0 +1,41 @@
+@import "../../_variables.scss";
+
+.featuredbrands{
+  background: $black-2;
+}
+
+.featuredbrands__container{
+  padding-top: pxToRem(171);
+  padding-bottom: pxToRem(105);
+}
+
+.featuredbrands__title{
+  color: var(--bs-white);
+  font-family: $font-family-primary;
+  text-align: center;
+}
+
+.featuredbrands__subtitle{
+  color: var(--bs-white);
+  font-family: $font-family-secondary;
+  text-align: center;
+}
+
+.carousel__title{
+  color: var(--bs-white);
+  font-family: $font-family-secondary;
+  text-align: center;
+}
+
+.carousel__viewbrands {
+  color: var(--bs-white);
+  width: pxToRem(253);
+  height: pxToRem(53);
+  border: 2px solid $white-1;
+  margin-top: pxToRem(77);
+  &:hover,
+  &:focus,
+  &:visited{
+    color: var(--bs-white);
+  }
+}
