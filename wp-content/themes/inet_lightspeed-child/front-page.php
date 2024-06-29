@@ -11,6 +11,8 @@ get_header(); ?>
                     $layout = get_row_layout();
                     if ($layout == 'hero') {
                         get_template_part('partials/hero', $layout);
+                    } elseif ($layout == 'welcome_cork_vine') {
+                        get_template_part('partials/welcome_cork_vine', $layout);
                     }
                 endwhile;
             endif;

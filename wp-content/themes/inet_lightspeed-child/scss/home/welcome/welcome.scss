@@ -1,0 +1,28 @@
+@import "../../_variables.scss";
+
+.welcome{
+  margin-top: pxToRem(111);
+  margin-left: auto;
+  margin-right: auto;
+  gap: pxToRem(165)
+}
+
+.welcome__title{
+  font-family: $font-family-primary;
+  max-width: 45rem;
+}
+
+.welcome__content,
+.welcome__subtitle{
+  font-family: $font-family-secondary;
+}
+
+.welcome__content{
+  line-height: 1.9rem !important;
+}
+
+.welcome__anchorlink {
+  &:hover {
+    color: $secondary;
+  }
+}

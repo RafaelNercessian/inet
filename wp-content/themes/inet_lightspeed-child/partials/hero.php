@@ -4,7 +4,7 @@ $subtitle = esc_html(get_sub_field('subtitle'));
 $wineImageId = esc_html(get_sub_field('wine')['id']);
 $backgroundHeroId = esc_html(get_sub_field('background_hero')['id']);
 ?>
-<section id="main" class="container row m-auto d-flex align-items-center vh-100">
+<section id="main" class="container row m-auto d-flex align-items-center vh-100 hero">
     <section class="col-lg-8 hero__containertext">
         <h1 class="hero__title"><?= $titleHero ?></h1>
         <h4 class="hero__subtitle fw-normal"><?= $subtitle ?></h4>
