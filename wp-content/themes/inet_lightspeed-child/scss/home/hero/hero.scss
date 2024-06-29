@@ -1,6 +1,6 @@
 @import "../../_variables.scss";
 
-.hero__imagebackground{
+.hero__imagebackground {
   background: $primary;
   height: 100vh;
   position: absolute;
@@ -10,17 +10,21 @@
   pointer-events: none;
 }
 
-.hero__title{
+.hero__title {
   font-family: $font-family-primary;
   color: $primary
 }
 
-.hero__container{
+.hero__container {
   display: flex;
   align-items: center;
 }
 
-.hero__subtitle{
+.hero__subtitle {
   font-family: $font-family-secondary;
   color: $primary
+}
+
+.hero__icon--white {
+  color: var(--bs-white);
 }
