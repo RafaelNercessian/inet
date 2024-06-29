@@ -6,10 +6,14 @@ get_header(); ?>
 
             <?php
             // Start the Loop.
-            while (have_posts()) :
-                the_post();
-                get_template_part('partials/hero');
-            endwhile;
+            if (have_rows('homepage')):
+                while (have_rows('homepage')) : the_row();
+                    $layout = get_row_layout();
+                    if ($layout == 'hero') {
+                        get_template_part('partials/hero', $layout);
+                    }
+                endwhile;
+            endif;
             ?>
 
         </div><!-- #content -->
