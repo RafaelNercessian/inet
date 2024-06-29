@@ -1,5 +1,17 @@
 @import "../../_variables.scss";
 
-.events{
-  margin-top: pxToRem(230);
+.events__backgroundimage{
+  background: url(./../img/bg_events.webp) $white-2;
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.events__wrapper{
+  padding-top: pxToRem(230);
+  padding-bottom: pxToRem(237);
+}
+
+.time__eventtwo{
+  margin-top: pxToRem(10);
 }
