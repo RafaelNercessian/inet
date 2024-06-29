@@ -17,11 +17,12 @@ get_header(); ?>
                             get_template_part('partials/features-brands', $layout);
                         } elseif ($layout == 'upcoming_events') {
                             get_template_part('partials/upcoming-events', $layout);
+                        } elseif ($layout == 'services') {
+                            get_template_part('partials/services', $layout);
                         }
                     endwhile;
                 endif;
                 ?>
-
             </div><!-- #content -->
         </div><!-- #primary -->
     </div><!-- #main-content -->

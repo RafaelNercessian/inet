@@ -1,0 +1,46 @@
+@import "../../_variables.scss";
+
+.services {
+  background: url(./../img/services-bg.webp) $black-2;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: pxToRem(858);
+}
+
+.services__title {
+  font-family: $font-family-primary;
+  color: var(--bs-white);
+}
+
+.services__subtitle {
+  font-family: $font-family-secondary;
+  color: var(--bs-white);
+  margin-bottom: pxToRem(34);
+}
+
+.services__content {
+  font-family: $font-family-secondary;
+  color: var(--bs-white);
+  margin-bottom: pxToRem(63);
+  line-height: pxToRem(30) !important;
+}
+
+.services__containerimage--absolute {
+  position: absolute;
+  top: pxToRem(30);
+  left: 0;
+}
+
+.content{
+  padding-top: pxToRem(126)
+}
+
+.services__anchorlink{
+  color: var(--bs-white);
+  &:focus,
+  &:visited,
+  &:hover{
+    color: var(--bs-white);
+  }
+}
