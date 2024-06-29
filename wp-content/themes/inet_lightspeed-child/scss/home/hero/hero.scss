@@ -2,29 +2,35 @@
 
 .hero__imagebackground {
   background: $primary;
-  height: 100vh;
-  position: absolute;
-  width: 24vw;
+  width: 23%;
   right: 0;
   z-index: -1;
-  pointer-events: none;
+  top: 0;
 }
 
 .hero__title {
   font-family: $font-family-primary;
-  color: $primary
-}
-
-.hero__container {
-  display: flex;
-  align-items: center;
+  color: $primary;
+  max-width: 45rem;
 }
 
 .hero__subtitle {
   font-family: $font-family-secondary;
-  color: $primary
+  color: $primary;
+  max-width: 45rem;
+  line-height: 2.2rem;
 }
 
 .hero__icon--white {
   color: var(--bs-white);
+}
+
+.hero__anchorlink {
+  &:hover {
+    color: $secondary;
+  }
+}
+
+.icon-long-arrow-right {
+  font-size: pxToRem(50);
 }
