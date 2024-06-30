@@ -136,4 +136,20 @@ function register_footer_menu_two() {
 }
 add_action('after_setup_theme', 'register_footer_menu_two');
 
-add_image_size('custom-size', 364, 529, true);
+function remove_editor_from_drink() {
+    remove_post_type_support('drink', 'editor');
+}
+add_action('init', 'remove_editor_from_drink');
+
+function remove_classic_editor_metabox() {
+    remove_meta_box('postdivrich', 'drink', 'normal');
+}
+add_action('admin_menu', 'remove_classic_editor_metabox');
+
+function disable_gutenberg_for_drink($use_block_editor, $post_type) {
+    if ($post_type === 'drink') {
+        return false;
+    }
+    return $use_block_editor;
+}
+add_filter('use_block_editor_for_post_type', 'disable_gutenberg_for_drink', 10, 2);

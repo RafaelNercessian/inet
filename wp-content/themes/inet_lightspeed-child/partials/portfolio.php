@@ -51,27 +51,63 @@ $terms = get_terms(array(
                     <div class="owl-carousel portfolio-carousel">
                         <?php
                         $args = array(
-                            'posts_per_page' => 10,
+                            'posts_per_page' => 10, //Let's limit as 10 for now
                             'post_type' => 'drink',
                             'post_status' => 'publish',
                         );
-                        $featured_query = new WP_Query($args);
-                        if ($featured_query->have_posts()) : ?>
-                            <?php while ($featured_query->have_posts()) : $featured_query->the_post(); ?>
+                        $portfolioQuery = new WP_Query($args);
+                        if ($portfolioQuery->have_posts()) : ?>
+                            <?php while ($portfolioQuery->have_posts()) : $portfolioQuery->the_post(); ?>
                                 <a class="achorcarousel" href="<?php the_permalink() ?>">
                                     <div class="carousel-item">
                                         <?php if (has_post_thumbnail()) : ?>
                                             <div class="carousel-image-container image-wrapper">
                                                 <?php the_post_thumbnail('large'); ?>
-                                                <div class="carousel-overlay"></div>
-                                                <h3 class="carousel__title fw-normal"><?php the_title(); ?></h3>
+                                                <div class="carousel__titlewrapper">
+                                                    <h3 class="carousel__title fw-normal"><?php the_title(); ?></h3>
+                                                    <p class="carousel__subtitle fw-normal"><?= esc_html(get_post_meta(get_the_ID(), 'bottle_name', true)) ?></p>
+                                                </div>
+                                                <div class="carousel-overlay d-flex flex-column justify-content-center">
+                                                    <h3 class="carousel__titleoverlay fw-normal"><?php the_title(); ?></h3>
+                                                    <p class="carousel__subtitleoverlay fw-normal"><?= esc_html(get_post_meta(get_the_ID(), 'bottle_name', true)) ?></p>
+                                                    <?php
+                                                    $child_terms = get_terms(array(
+                                                        'taxonomy' => 'category_drink',
+                                                        'hide_empty' => false,
+                                                        'parent' => 0,
+                                                    ));
+
+                                                    $all_child_terms = array();
+                                                    if (!empty($child_terms) && !is_wp_error($child_terms)) {
+                                                        foreach ($child_terms as $parent_term) {
+                                                            $children = get_terms(array(
+                                                                'taxonomy' => 'category_drink',
+                                                                'hide_empty' => true,
+                                                                'parent' => $parent_term->term_id
+                                                            ));
+
+                                                            if (!empty($children) && !is_wp_error($children)) {
+                                                                $all_child_terms = array_merge($all_child_terms, $children);
+                                                            }
+                                                        }
+                                                    }
+
+                                                    if (!empty($all_child_terms)): ?>
+                                                        <ul class="carousel__categoryitem p-0">
+                                                            <?php foreach ($all_child_terms as $term): ?>
+                                                                <li class="carousel__categoryitemlist"><?= esc_html($term->name) ?></li>
+                                                            <?php endforeach; ?>
+                                                        </ul>
+                                                    <?php endif; ?>
+                                                    <p class="carousel__viewproduct">View product</p>
+                                                </div>
                                             </div>
                                         <?php endif; ?>
                                     </div>
                                 </a>
                             <?php endwhile;
                         endif;
-                        wp_reset_postdata();?>
+                        wp_reset_postdata(); ?>
                     </div>
                     <button class="portfolio-custom-nav custom-nav-prev"><i class="icon-chevron-left"></i></button>
                     <button class="portfolio-custom-nav custom-nav-next"><i class="icon-chevron-right"></i></button>

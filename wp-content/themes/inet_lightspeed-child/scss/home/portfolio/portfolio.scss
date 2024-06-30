@@ -43,6 +43,10 @@
 
   .subcategory-list {
     margin-left: 20px;
+
+    .category-child-name:first-child {
+      margin-top: pxToRem(16);
+    }
   }
 
   .category-name {
@@ -89,34 +93,107 @@
     left: 0;
     height: 100%;
     object-fit: contain;
-    max-height: 529px; /* Ajustado para a altura máxima desejada */
+    max-height: 529px;
     right: 0;
     width: 45%;
     padding: 30px 0;
     margin: 0 auto;
   }
 
-  .carousel-overlay,
-  .carousel__title {
+  .carousel-overlay {
     position: absolute;
+    top: 0;
     left: 0;
     right: 0;
-  }
-
-  .carousel-overlay {
-    top: 0;
     bottom: 0;
+    background-color: rgba(48, 41, 33, 0.9);;
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
 
   .carousel__title {
-    bottom: 0;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.5);
     color: white;
     margin: 0;
+    font-size: pxToRem(24);
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    line-height: pxToRem(26);
+    text-transform: none;
+    font-family: $font-family-secondary;
   }
 
-  .carousel-item{
+  .carousel-item {
     border: 1px solid $black-2;
+  }
+
+  .carousel__subtitle {
+    font-size: pxToRem(16);
+    letter-spacing: 0.8px;
+    line-height: pxToRem(20);
+    margin-top: pxToRem(8);
+    color: var(--bs-white);
+    font-family: $font-family-secondary;
+    text-align: center;
+    position: relative;
+  }
+
+  .carousel__titlewrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(48, 41, 33, 0.9);
+    padding: pxToRem(18);
+  }
+
+  .owl-item.active .carousel-item:hover .carousel-overlay {
+    opacity: 1;
+  }
+
+  .owl-item.active .carousel-item:hover .carousel__titlewrapper {
+    display: none;
+  }
+
+  .carousel__titleoverlay {
+    font-size: pxToRem(40);
+    font-weight: 500;
+    margin-bottom: 0;
+    line-height: pxToRem(30);
+    color: var(--bs-white);
+    text-align: center;
+    font-family: $font-family-secondary;
+  }
+
+  .carousel__subtitleoverlay {
+    font-size: pxToRem(16);
+    line-height: pxToRem(20);
+    margin-top: pxToRem(12);
+    margin-bottom: pxToRem(8);
+    color: var(--bs-white);
+    text-align: center;
+  }
+
+  .carousel__categoryitemlist {
+    font-size: pxToRem(16);
+    line-height: pxToRem(25);
+    margin-top: pxToRem(8);
+    color: var(--bs-white);
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    letter-spacing: 0.8px;
+  }
+
+  .carousel__categoryitem {
+    margin-bottom: 1rem;
+  }
+
+  .carousel__viewproduct {
+    font-size: pxToRem(16);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: pxToRem(15);
+    color: var(--bs-white);
+    text-align: center;
   }
 }
