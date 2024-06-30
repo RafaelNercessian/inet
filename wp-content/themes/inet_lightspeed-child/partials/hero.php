@@ -2,10 +2,9 @@
 $titleHero = esc_html(get_sub_field('title'));
 $subtitle = esc_html(get_sub_field('subtitle'));
 $wineImageId = esc_html(get_sub_field('wine')['id']);
-$backgroundHeroId = esc_html(get_sub_field('background_hero')['id']);
 ?>
-<section id="main" class="container row m-auto d-flex align-items-center vh-100 hero">
-    <section class="col-lg-8 hero__containertext">
+<section class="container row m-auto d-flex align-items-center vh-100 hero">
+    <section class="col-lg-6 hero__containertext">
         <h1 class="hero__title"><?= $titleHero ?></h1>
         <h4 class="hero__subtitle fw-normal"><?= $subtitle ?></h4>
         <div class="d-flex align-items-center justify-content-start my-lg-3 gap-5">
@@ -15,10 +14,7 @@ $backgroundHeroId = esc_html(get_sub_field('background_hero')['id']);
                             class="icon-long-arrow-right"></i></a>
         </div>
     </section>
-    <section class="col-lg-4 hero__containerimage">
-        <section class="hero__imagebackground vh-100 position-absolute pe-none ">
-            <?= wp_get_attachment_image($backgroundHeroId, 'large') ?>
-        </section>
+    <section class="col-lg-5 offset-lg-1 hero__containerimage">
         <section class="row d-flex align-items-end">
             <section class="col-lg-10">
                 <?= wp_get_attachment_image($wineImageId, 'large') ?>
