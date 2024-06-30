@@ -1,7 +1,7 @@
 @import "../../_variables.scss";
 
 .welcome{
-  margin-top: pxToRem(111);
+  margin-top: pxToRem(70);
   margin-left: auto;
   margin-right: auto;
   gap: pxToRem(165)
@@ -24,5 +24,13 @@
 .welcome__anchorlink {
   &:hover {
     color: $secondary;
+  }
+}
+
+
+//Media queries
+@media screen and (min-width: 768px) {
+  .welcome {
+    margin-top: pxToRem(121);
   }
 }

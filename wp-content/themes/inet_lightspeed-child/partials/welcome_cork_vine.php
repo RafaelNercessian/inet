@@ -4,8 +4,8 @@ $subtitle = esc_html(get_sub_field('subtitle'));
 $content = esc_html(get_sub_field('content'));
 $mainImageId = esc_html(get_sub_field('main_image')['id']);
 ?>
-<section class="container mx-auto">
-    <div class="row">
+<section class="container welcome">
+    <div class="row  mx-auto">
         <section class="cold-sm-12 col-md-6">
             <h2 class="welcome__title"><?= $title ?></h2>
             <h3 class="welcome__subtitle fw-normal"><?= $subtitle ?></h3>
