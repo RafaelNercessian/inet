@@ -43,4 +43,16 @@ jQuery(document).ready(function ($) {
     $('.didyouknow-custom-nav.custom-nav-next').click(function() {
         didyouknow.trigger('next.owl.carousel');
     });
+
+    $('.category-item.has-children').each(function() {
+        var $item = $(this);
+        var $categoryName = $item.find('.category-name');
+        var $subcategoryList = $item.find('.subcategory-list');
+        var $icon = $item.find('.icon-plus');
+
+        $categoryName.on('click', function() {
+            $subcategoryList.slideToggle(300);
+            $icon.toggleClass('icon-plus icon-minus');
+        });
+    });
 });

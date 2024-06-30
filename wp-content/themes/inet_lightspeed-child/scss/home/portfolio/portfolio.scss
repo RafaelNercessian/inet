@@ -19,3 +19,27 @@
 .portfolio__content{
   margin-bottom: pxToRem(91) !important;
 }
+
+.portfolio__drinks{
+  li{
+    list-style-type: none;
+  }
+}
+
+.category-item {
+  cursor: pointer;
+}
+
+.category-name {
+  display: flex;
+  align-items: center;
+}
+
+.icon-plus, .icon-minus {
+  margin-right: 5px;
+  transition: transform 0.3s ease;
+}
+
+.subcategory-list {
+  margin-left: 20px;
+}
