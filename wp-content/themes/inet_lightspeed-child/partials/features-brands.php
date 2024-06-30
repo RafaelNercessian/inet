@@ -6,7 +6,7 @@ $subtitle = esc_html(get_sub_field('subtitle'));
     <section class="container row mx-auto featuredbrands__container">
         <section>
             <h2 class="featuredbrands__title"><?= $title ?></h2>
-            <h3 class="featuredbrands__subtitle fw-normal my-1"><?= $subtitle ?></h3>
+            <h3 class="featuredbrands__subtitle fw-normal"><?= $subtitle ?></h3>
         </section>
         <section class="owl-carousel-container">
             <div class="container position-relative">
@@ -29,9 +29,9 @@ $subtitle = esc_html(get_sub_field('subtitle'));
                                             $imageId = get_field('image_bottle', get_the_ID());
                                             echo wp_get_attachment_image($imageId['ID'], 'large', false, array('class' => 'featured-product-image'));
                                             ?>
-                                        </div>
+                                        </div>fw-bol
                                     <?php endif; ?>
-                                    <h3 class="carousel__title fw-bold text-uppercase"><?php the_title(); ?></h3>
+                                    <h3 class="carousel__title text-uppercase"><?php the_title(); ?></h3>
                                 </div>
                             </a>
                         <?php endwhile;
@@ -45,6 +45,6 @@ $subtitle = esc_html(get_sub_field('subtitle'));
             </div>
         </section>
     </section>
-    <a class="d-flex mx-auto carousel__viewbrands justify-content-center align-items-center" href="#">View all
+    <a class="d-flex mx-auto carousel__viewbrands justify-content-center align-items-center text-uppercase" href="#">View all
         brands</a>
 </section>

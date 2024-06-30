@@ -19,10 +19,10 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    $('.featuredbrands-custom-nav.custom-nav-prev').click(function () {
+    $('.featuredbrandscarousel-custom-nav.custom-nav-prev').click(function () {
         featuredbrandscarousel.trigger('prev.owl.carousel');
     });
-    $('.featuredbrands-custom-nav.custom-nav-next').click(function () {
+    $('.featuredbrandscarousel-custom-nav.custom-nav-next').click(function () {
         featuredbrandscarousel.trigger('next.owl.carousel');
     });
 
