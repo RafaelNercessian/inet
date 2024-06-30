@@ -8,10 +8,16 @@ $wineImageId = esc_html(get_sub_field('wine')['id']);
         <h1 class="hero__title"><?= $titleHero ?></h1>
         <h4 class="hero__subtitle fw-normal"><?= $subtitle ?></h4>
         <div class="d-flex align-items-center justify-content-start my-lg-3 gap-5">
-            <a href="#" class="d-flex gap-1 align-items-center fw-bold text-uppercase hero__anchorlink">Our products<i
-                            class="icon-long-arrow-right"></i></a>
-            <a href="#" class="d-flex gap-1 align-items-center fw-bold text-uppercase hero__anchorlink">Contact Us<i
-                            class="icon-long-arrow-right"></i></a>
+            <div class="row">
+                <div class="col-md-12 col-lg-6">
+                    <a href="#" class="d-flex gap-1 align-items-center fw-bold text-uppercase hero__anchorlink">Our products<i
+                                class="icon-long-arrow-right"></i></a>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <a href="#" class="d-flex gap-1 align-items-center fw-bold text-uppercase hero__anchorlink">Contact Us<i
+                                class="icon-long-arrow-right"></i></a>
+                </div>
+            </div>
         </div>
     </section>
     <section class="col-lg-5 offset-lg-1 hero__containerimage">
