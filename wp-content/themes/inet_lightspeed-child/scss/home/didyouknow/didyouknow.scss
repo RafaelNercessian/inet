@@ -1,0 +1,24 @@
+@import "../../_variables.scss";
+
+.didyouknow{
+  margin-top: pxToRem(160);
+}
+
+.didyouknow__title{
+  font-family: $font-family-primary;
+  margin-bottom: 2rem;
+  color: $primary;
+}
+
+.didyouknow__subtitle{
+  font-family: $font-family-secondary;
+  margin-bottom: 2rem;
+  color: $primary;
+}
+
+.didyouknow__content{
+  font-family: $font-family-secondary;
+  color: $primary;
+  line-height: 1.9rem !important;
+  margin-bottom: pxToRem(93);
+}

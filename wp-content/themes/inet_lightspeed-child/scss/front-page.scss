@@ -4,3 +4,30 @@
 @import "home/features_brands/features_brands.scss";
 @import "home/events/events.scss";
 @import "home/services/services.scss";
+@import "home/didyouknow/didyouknow.scss";
+
+.owl-carousel-container {
+  overflow: hidden;
+}
+
+.custom-nav-prev,
+.custom-nav-next {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  background: black;
+  color: white;
+  width: 80px;
+  height: 80px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.custom-nav-prev {
+  left: -40px;
+}
+
+.custom-nav-next {
+  right: -40px;
+}

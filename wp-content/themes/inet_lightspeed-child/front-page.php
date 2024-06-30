@@ -19,6 +19,8 @@ get_header(); ?>
                             get_template_part('partials/upcoming-events', $layout);
                         } elseif ($layout == 'services') {
                             get_template_part('partials/services', $layout);
+                        } elseif ($layout == 'did_you_know') {
+                            get_template_part('partials/did-you-know', $layout);
                         }
                     endwhile;
                 endif;
