@@ -35,7 +35,8 @@ $content = esc_html(get_sub_field('content'));
                             </div>
                         </a>
                     <?php endwhile;
-                endif; ?>
+                endif;
+                wp_reset_postdata(); ?>
             </div>
             <button class="didyouknow-custom-nav custom-nav-prev"><i class="icon-chevron-left"></i></button>
             <button class="didyouknow-custom-nav custom-nav-next"><i class="icon-chevron-right"></i></button>

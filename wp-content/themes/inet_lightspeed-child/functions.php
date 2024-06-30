@@ -135,3 +135,5 @@ function register_footer_menu_two() {
     register_nav_menu('footer-menu-two', __('Footer Menu Two'));
 }
 add_action('after_setup_theme', 'register_footer_menu_two');
+
+add_image_size('custom-size', 364, 529, true);

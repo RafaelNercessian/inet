@@ -23,6 +23,7 @@ jQuery(document).ready(function ($) {
     didyouknow.owlCarousel({
         loop: true,
         margin: 10,
+        autoHeight: true,
         nav: true,
         responsive: {
             0: {

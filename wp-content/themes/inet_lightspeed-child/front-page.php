@@ -21,6 +21,8 @@ get_header(); ?>
                             get_template_part('partials/services', $layout);
                         } elseif ($layout == 'did_you_know') {
                             get_template_part('partials/did-you-know', $layout);
+                        } elseif ($layout == 'portfolio') {
+                            get_template_part('partials/portfolio', $layout);
                         }
                     endwhile;
                 endif;

@@ -21,18 +21,17 @@
 }
 
 .portfolio__drinks{
+  border-bottom: 1px solid;
   li{
     list-style-type: none;
   }
 }
 
-.category-item {
-  cursor: pointer;
-}
-
-.category-name {
-  display: flex;
-  align-items: center;
+.portfolio__featuredproductstitle{
+  font-family: $font-family-secondary;
+  font-size: pxToRem(20);
+  line-height: pxToRem(30);
+  margin-bottom: pxToRem(37);
 }
 
 .icon-plus, .icon-minus {
@@ -42,4 +41,32 @@
 
 .subcategory-list {
   margin-left: 20px;
+}
+
+.category-name{
+  font-family: $font-family-secondary;
+  font-size: pxToRem(20);
+  line-height: pxToRem(30);
+  color: $primary;
+  opacity: 1;
+  letter-spacing: 2px;
+  &:hover{
+    color: $secondary;
+  }
+}
+
+.category-item{
+  margin-bottom: pxToRem(16);
+}
+
+.category-child-name{
+  font-family: $font-family-secondary;
+  font-size: pxToRem(20);
+  line-height: pxToRem(30);
+  color: $primary;
+  margin-bottom: pxToRem(16);
+  cursor: pointer;
+  &:hover{
+    color: $secondary;
+  }
 }
