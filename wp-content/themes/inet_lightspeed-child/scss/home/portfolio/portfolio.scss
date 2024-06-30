@@ -1,0 +1,21 @@
+@import "../../_variables.scss";
+
+.portfolio__title {
+  font-family: $font-family-primary;
+  color: $primary;
+  margin-bottom: pxToRem(21);
+}
+
+.portfolio__subtitle,
+.portfolio__content {
+  font-family: $font-family-secondary;
+  color: $primary;
+}
+
+.portfolio__subtitle {
+  margin-bottom: pxToRem(21);
+}
+
+.portfolio__content{
+  margin-bottom: pxToRem(91) !important;
+}
