@@ -8,27 +8,43 @@ $subtitle = esc_html(get_sub_field('subtitle'));
             <h2 class="featuredbrands__title"><?= $title ?></h2>
             <h3 class="featuredbrands__subtitle fw-normal my-1"><?= $subtitle ?></h3>
         </section>
-        <section>
-            <?php
-            $args = array(
-                'post_type' => 'wine',
-                'posts_per_page' => 10,
-            );
-            $featured_query = new WP_Query($args);
-            if ($featured_query->have_posts()) : ?>
-                <div class="owl-carousel featured-carousel">
-                    <?php while ($featured_query->have_posts()) : $featured_query->the_post(); ?>
-                        <div class="carousel-item">
-                            <?php if (has_post_thumbnail()) : ?>
-                                <?php the_post_thumbnail('large'); ?>
-                            <?php endif; ?>
-                            <h6 class="carousel__title text-uppercase fw-normal my-2"><?php the_title(); ?></h6>
-                        </div>
-                    <?php endwhile; ?>
+        <section class="owl-carousel-container">
+            <div class="container position-relative">
+                <div class="owl-carousel featuredbrands-carousel">
+                    <?php
+                    $args = array(
+                        'posts_per_page' => 10,
+                        'post_type' => 'featured_product',
+                        'post_status' => 'publish',
+                    );
+                    $featured_query = new WP_Query($args);
+                    if ($featured_query->have_posts()) : ?>
+                        <?php while ($featured_query->have_posts()) : $featured_query->the_post(); ?>
+                            <a class="achorcarousel" href="<?php the_permalink() ?>">
+                                <div class="carousel-item">
+                                    <?php if (has_post_thumbnail()) : ?>
+                                        <div class="carousel-image-container">
+                                            <?php the_post_thumbnail('large', array('class' => 'background-image')); ?>
+                                            <?php
+                                            $imageId = get_field('image_bottle', get_the_ID());
+                                            echo wp_get_attachment_image($imageId['ID'], 'large', false, array('class' => 'featured-product-image'));
+                                            ?>
+                                        </div>
+                                    <?php endif; ?>
+                                    <h3 class="carousel__title fw-bold text-uppercase"><?php the_title(); ?></h3>
+                                </div>
+                            </a>
+                        <?php endwhile;
+                    endif;
+                    wp_reset_postdata(); ?>
                 </div>
-                <?php wp_reset_postdata();
-            endif; ?>
-            <a class="d-flex mx-auto carousel__viewbrands justify-content-center align-items-center" href="#">View all brands</a>
+                <button class="featuredbrandscarousel-custom-nav custom-nav-prev"><i class="icon-chevron-left"></i>
+                </button>
+                <button class="featuredbrandscarousel-custom-nav custom-nav-next"><i class="icon-chevron-right"></i>
+                </button>
+            </div>
         </section>
     </section>
+    <a class="d-flex mx-auto carousel__viewbrands justify-content-center align-items-center" href="#">View all
+        brands</a>
 </section>

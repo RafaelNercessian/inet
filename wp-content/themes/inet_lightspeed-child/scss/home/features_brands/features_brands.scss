@@ -1,41 +1,75 @@
 @import "../../_variables.scss";
 
-.featuredbrands{
+.featuredbrands {
   background: $black-2;
 }
 
-.featuredbrands__container{
+.featuredbrands__container {
   padding-top: pxToRem(171);
-  padding-bottom: pxToRem(105);
 }
 
-.featuredbrands__title{
+.featuredbrands__title {
   color: var(--bs-white);
   font-family: $font-family-primary;
   text-align: center;
 }
 
-.featuredbrands__subtitle{
+.featuredbrands__subtitle {
   color: var(--bs-white);
   font-family: $font-family-secondary;
   text-align: center;
 }
 
-.carousel__title{
-  color: var(--bs-white);
-  font-family: $font-family-secondary;
-  text-align: center;
-}
-
-.carousel__viewbrands {
-  color: var(--bs-white);
-  width: pxToRem(253);
-  height: pxToRem(53);
-  border: 2px solid $white-1;
-  margin-top: pxToRem(77);
-  &:hover,
-  &:focus,
-  &:visited{
+.featuredbrands {
+  .carousel__title {
     color: var(--bs-white);
+    font-family: $font-family-secondary;
+    text-align: center;
+    margin-top: auto;
+    position: absolute;
+    bottom: pxToRem(32);
+    left: 0;
+    right: 0;
+    letter-spacing: 3.2px;
+    font-size: pxToRem(16);
+    line-height: pxToRem(25)
+  }
+
+  .carousel__viewbrands {
+    color: var(--bs-white);
+    width: pxToRem(253);
+    height: pxToRem(53);
+    border: 2px solid $white-1;
+    margin-top: pxToRem(77);
+
+    &:hover,
+    &:focus,
+    &:visited {
+      color: var(--bs-white);
+    }
+  }
+
+  .featured-product-image {
+    position: absolute;
+    top: pxToRem(20);
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: pxToRem(570);
+    width: pxToRem(180);
+    object-fit: contain
+  }
+
+  .carousel-image-container{
+    border:2px solid white;
+    padding: pxToRem(20);
+  }
+
+  .carousel-item{
+    height: pxToRem(656);
+  }
+
+  .custom-nav-prev,
+  .custom-nav-next{
+    top: pxToRem(213);
   }
 }
