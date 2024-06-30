@@ -1,5 +1,6 @@
 jQuery(document).ready(function ($) {
     var didyouknow = $('.didyouknow-carousel');
+    var portfoliocarousel =$('.portfolio-carousel');
     var owl = $('.featured-carousel');
     owl.owlCarousel({
         loop: true,
@@ -18,6 +19,31 @@ jQuery(document).ready(function ($) {
                 items: 3
             }
         }
+    });
+
+    portfoliocarousel.owlCarousel({
+        loop: true,
+        margin: 10,
+        autoHeight: true,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+
+    $('.portfolio-custom-nav.custom-nav-prev').click(function() {
+        portfoliocarousel.trigger('prev.owl.carousel');
+    });
+    $('.portfolio-custom-nav.custom-nav-next').click(function() {
+        portfoliocarousel.trigger('next.owl.carousel');
     });
 
     didyouknow.owlCarousel({

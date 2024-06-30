@@ -7,14 +7,10 @@
 @import "home/didyouknow/didyouknow.scss";
 @import "home/portfolio/portfolio.scss";
 
-.owl-carousel-container {
-  overflow: hidden;
-}
-
 .custom-nav-prev,
 .custom-nav-next {
   position: absolute;
-  top: 45%;
+  top: 50%;
   transform: translateY(-50%);
   background: black;
   color: white;

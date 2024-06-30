@@ -48,7 +48,7 @@ $terms = get_terms(array(
         <section class="col-lg-9">
             <section class="owl-carousel-container">
                 <div class="container position-relative">
-                    <div class="owl-carousel didyouknow-carousel">
+                    <div class="owl-carousel portfolio-carousel">
                         <?php
                         $args = array(
                             'posts_per_page' => 10,
@@ -61,8 +61,8 @@ $terms = get_terms(array(
                                 <a class="achorcarousel" href="<?php the_permalink() ?>">
                                     <div class="carousel-item">
                                         <?php if (has_post_thumbnail()) : ?>
-                                            <div class="carousel-image-container">
-                                                <?php the_post_thumbnail('medium'); ?>
+                                            <div class="carousel-image-container image-wrapper">
+                                                <?php the_post_thumbnail('large'); ?>
                                                 <div class="carousel-overlay"></div>
                                                 <h3 class="carousel__title fw-normal"><?php the_title(); ?></h3>
                                             </div>
@@ -73,8 +73,8 @@ $terms = get_terms(array(
                         endif;
                         wp_reset_postdata();?>
                     </div>
-                    <button class="didyouknow-custom-nav custom-nav-prev"><i class="icon-chevron-left"></i></button>
-                    <button class="didyouknow-custom-nav custom-nav-next"><i class="icon-chevron-right"></i></button>
+                    <button class="portfolio-custom-nav custom-nav-prev"><i class="icon-chevron-left"></i></button>
+                    <button class="portfolio-custom-nav custom-nav-next"><i class="icon-chevron-right"></i></button>
                 </div>
             </section>
         </section>

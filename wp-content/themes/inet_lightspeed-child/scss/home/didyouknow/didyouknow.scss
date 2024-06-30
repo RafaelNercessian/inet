@@ -1,50 +1,52 @@
 @import "../../_variables.scss";
 
-.didyouknow{
+.didyouknow {
   margin-top: pxToRem(160);
 }
 
-.didyouknow__title{
+.didyouknow__title {
   font-family: $font-family-primary;
   margin-bottom: 2rem;
   color: $primary;
 }
 
-.didyouknow__subtitle{
+.didyouknow__subtitle {
   font-family: $font-family-secondary;
   margin-bottom: 2rem;
   color: $primary;
 }
 
-.didyouknow__content{
+.didyouknow__content {
   font-family: $font-family-secondary;
   color: $primary;
   line-height: 1.9rem !important;
 }
 
-.carousel-image-container {
-  position: relative;
-  overflow: hidden;
-}
+.didyouknow {
+  .carousel-image-container {
+    position: relative;
+    overflow: hidden;
+  }
 
-.carousel-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(122, 46, 9, 0.73);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
+  .carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(122, 46, 9, 0.73);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
 
-.owl-item.active .carousel-item:hover .carousel-overlay {
-  opacity: 1;
-}
+  .owl-item.active .carousel-item:hover .carousel-overlay {
+    opacity: 1;
+  }
 
-.didyouknow .carousel__title {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  display: flex;
+  .didyouknow-carousel .carousel__title {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+  }
 }
