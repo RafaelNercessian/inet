@@ -13,7 +13,7 @@
 
         </div>
         <div class="row footer__linkscontainer">
-            <div class="col-lg-4">
+            <div class="col-lg-2">
                 <h4 class="footer__title text-uppercase">Our products</h4>
                 <nav class="footer-navigation">
                     <?php
@@ -24,6 +24,24 @@
                     ));
                     ?>
                 </nav>
+            </div>
+            <div class="col-lg-2">
+                <h4 class="footer__title text-uppercase">Our company</h4>
+                <nav class="footer-navigation">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'footer-menu-two',
+                        'menu_class' => 'footer-menu-two',
+                        'container' => false,
+                    ));
+                    ?>
+                </nav>
+            </div>
+            <div class="col-lg-2">
+                <h4 class="footer__title text-uppercase">Get in touch</h4>
+            </div>
+            <div class="col-lg-4">
+                <h4 class="footer__title text-uppercase">Join Our Team</h4>
             </div>
         </div>
     </section>

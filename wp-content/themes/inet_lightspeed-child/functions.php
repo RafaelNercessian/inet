@@ -130,3 +130,8 @@ function register_footer_menu() {
     register_nav_menu('footer-menu', __('Footer Menu'));
 }
 add_action('after_setup_theme', 'register_footer_menu');
+
+function register_footer_menu_two() {
+    register_nav_menu('footer-menu-two', __('Footer Menu Two'));
+}
+add_action('after_setup_theme', 'register_footer_menu_two');
