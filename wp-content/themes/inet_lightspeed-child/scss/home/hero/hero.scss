@@ -1,5 +1,9 @@
 @import "../../_variables.scss";
 
+.hero{
+  margin-top: pxToRem(248);
+}
+
 .hero__imagebackground {
   background: $primary;
   width: 23%;
@@ -38,7 +42,7 @@
 //Media Queries
 .hero:after {
   display: none;
-  background: url(https://cdn.fccellars.com/wp-content/themes/inet_lightspeed-child/img/accent-bg-town.webp)  #302921;
+  background: url(https://cdn.fccellars.com/wp-content/themes/inet_lightspeed-child/img/accent-bg-town.webp) #302921;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -55,6 +59,17 @@
     max-width: 400px;
     display: block;
     z-index: -1;
+  }
+
+  .hero__containerimage {
+    picture {
+      position: relative;
+    }
+  }
+
+  .hero{
+    height: 100vh;
+    margin-top: 0;
   }
 }
 
