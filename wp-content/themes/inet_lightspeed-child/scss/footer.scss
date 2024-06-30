@@ -1,0 +1,41 @@
+@import '_variables.scss';
+@import 'mixins.scss';
+
+#primary-footer {
+  background: $black-2;
+  margin-top: pxToRem(131);
+}
+
+.footer__title {
+  color: var(--bs-white);
+  font-family: $font-family-secondary;
+  font-size: pxToRem(18);
+  line-height: pxToRem(24);
+}
+
+.footer-navigation {
+  li {
+    list-style-type: none;
+    font-family: $font-family-secondary;
+    font-size: pxToRem(18);
+    line-height: pxToRem(34);
+  }
+  ul{
+    padding-left: 0;
+  }
+  a{
+    color: var(--bs-white);
+    &:focus,
+    &:visited{
+      color: var(--bs-white);
+    }
+    &:hover{
+      color: $orange-1;
+    }
+  }
+}
+
+.footer__linkscontainer{
+  margin-top: pxToRem(59);
+  margin-bottom: pxToRem(32);
+}

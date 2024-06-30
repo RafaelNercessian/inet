@@ -4,35 +4,39 @@
  */
 ?>
 
-<footer id="primary-footer" class="container">
+<footer id="primary-footer" class="container-fluid px-0 pt-3 footer">
+    <section class="row container mx-auto px-0">
+        <div class="col-lg-12">
+            <?= wp_get_attachment_image('112', 'large') ?>
+        </div>
+        <div class="col-lg-11">
 
-    <?php
-    //Build your footer divs here
-    //Use native WP Menus for navigation elements, and ACF repeaters+settings for global items (like Social icons)
-    ?>
-
-    <div class="site-credits">
-        <?php
-        if (is_front_page()) $byline = "Web design by iNet Media Ltd. <a href='https://inet-media.ca/' target='_blank' rel='nofollow'>Digital marketing</a> experts.";
-        else $byline = "Web design by iNet Media Ltd. Digital marketing experts.";
-        ?>
-        <div class="copyright">&copy; <?php echo date('Y');?> <?php echo get_bloginfo('name'); ?></div>
-        <p><a href='/privacy-policy/'><?php _e('Privacy Policy', 'lightspeed'); ?></a></p>
-        <div class='byline'><?php _e($byline, 'lightspeed'); ?></div>
-    </div>
-
+        </div>
+        <div class="row footer__linkscontainer">
+            <div class="col-lg-4">
+                <h4 class="footer__title text-uppercase">Our products</h4>
+                <nav class="footer-navigation">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'footer-menu',
+                        'menu_class' => 'footer-menu',
+                        'container' => false,
+                    ));
+                    ?>
+                </nav>
+            </div>
+        </div>
+    </section>
 </footer>
-
-
 
 
 <?php
 //outputs jQuery.js, and other enqueued scripts
 wp_footer();
 ?>
-<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(). "/js/global.js";?>'></script>
+<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri() . "/js/global.js"; ?>'></script>
 <script>
-    jQuery(function($) {
+    jQuery(function ($) {
 
         <?php
 
@@ -49,27 +53,27 @@ wp_footer();
 
 
         #Main Deferred Global
-        $deferred_styles[] = get_stylesheet_directory_uri()."/css/deferred-global.css";
+        $deferred_styles[] = get_stylesheet_directory_uri() . "/css/deferred-global.css";
 
 
         # Deferred Page Template CSS
         # Takes the template's filename eg: page-contact.php, and enqueues /css/page-contact.css if it exists
         global $template;
-        $template_css_file = str_replace('.php','.css', basename($template));
-        if (file_exists(get_stylesheet_directory()."/css/".$template_css_file)) {
-            $deferred_styles[] = get_stylesheet_directory_uri()."/css/".$template_css_file;
+        $template_css_file = str_replace('.php', '.css', basename($template));
+        if (file_exists(get_stylesheet_directory() . "/css/" . $template_css_file)) {
+            $deferred_styles[] = get_stylesheet_directory_uri() . "/css/" . $template_css_file;
         }
 
 
         # Finally...
         # Deferred Library Styles (owl, fancybox, etc...)
-        $deferred_styles = array_merge($GLOBALS['INET_DEFER_STYLES'],$deferred_styles);
+        $deferred_styles = array_merge($GLOBALS['INET_DEFER_STYLES'], $deferred_styles);
 
         ?>
 
         deferred = <?php echo json_encode($deferred_styles);?>;
 
-        $(deferred).each(function(index, element) {
+        $(deferred).each(function (index, element) {
             var doc = document.createElement('link');
             doc.rel = 'stylesheet';
             doc.href = element;

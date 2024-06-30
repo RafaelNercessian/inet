@@ -126,3 +126,7 @@ require get_stylesheet_directory() . '/inc/shortcodes.php';
  */
 require get_stylesheet_directory() . '/inc/dequeue-descript.php';
 
+function register_footer_menu() {
+    register_nav_menu('footer-menu', __('Footer Menu'));
+}
+add_action('after_setup_theme', 'register_footer_menu');
