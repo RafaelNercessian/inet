@@ -43,10 +43,32 @@
     opacity: 1;
   }
 
-  .didyouknow-carousel .carousel__title {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    display: flex;
+  .didyouknow-carousel {
+    .carousel__title {
+      color: var(--bs-white);
+      font-family: $font-family-secondary;
+      margin-bottom: pxToRem(40);
+      font-weight: 500;
+    }
+
+    .carousel__contentcontainer {
+      display: flex;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      padding-left: 2.75rem;
+      padding-right: 3.375rem;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: pxToRem(62);
+    }
+
+    .carousel__read{
+      color: var(--bs-white);
+      font-family: $font-family-secondary;
+      font-size: pxToRem(16);
+      line-height: pxToRem(30);
+      gap: 1.3rem;
+    }
   }
 }

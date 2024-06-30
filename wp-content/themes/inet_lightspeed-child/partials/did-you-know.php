@@ -29,7 +29,10 @@ $content = esc_html(get_sub_field('content'));
                                     <div class="carousel-image-container">
                                         <?php the_post_thumbnail('large'); ?>
                                         <div class="carousel-overlay"></div>
-                                        <h3 class="carousel__title fw-normal"><?php the_title(); ?></h3>
+                                        <div class="carousel__contentcontainer">
+                                            <h3 class="carousel__title fw-normal"><?php the_title(); ?></h3>
+                                            <p  class="carousel__read fw-bold d-flex align-items-center text-uppercase">Read Article<i class="icon-long-arrow-right"></i></p>
+                                        </div>
                                     </div>
                                 <?php endif; ?>
                             </div>

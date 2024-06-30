@@ -55,7 +55,7 @@ jQuery(document).ready(function ($) {
         loop: true,
         margin: 10,
         autoHeight: true,
-        nav: true,
+        nav: false,
         responsive: {
             0: {
                 items: 1
