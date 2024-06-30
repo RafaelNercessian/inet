@@ -109,6 +109,7 @@
     background-color: rgba(48, 41, 33, 0.9);;
     opacity: 0;
     transition: opacity 0.3s ease;
+    padding-top: pxToRem(226);
   }
 
   .carousel__title {
@@ -175,7 +176,7 @@
   .carousel__categoryitemlist {
     font-size: pxToRem(16);
     line-height: pxToRem(25);
-    margin-top: pxToRem(8);
+    margin-top: pxToRem(16);
     color: var(--bs-white);
     text-align: center;
     list-style: none;
@@ -184,7 +185,7 @@
   }
 
   .carousel__categoryitem {
-    margin-bottom: 1rem;
+    margin-bottom: 0.3rem;
   }
 
   .carousel__viewproduct {
@@ -195,5 +196,16 @@
     margin-top: pxToRem(15);
     color: var(--bs-white);
     text-align: center;
+  }
+
+  .icon-long-arrow-right{
+    color: var(--bs-white);
+    text-align: center;
+  }
+
+  .carousel__region{
+    color: var(--bs-white);
+    text-align: center;
+    font-family: $font-family-secondary;
   }
 }

@@ -67,7 +67,7 @@ $terms = get_terms(array(
                                                     <h3 class="carousel__title fw-normal"><?php the_title(); ?></h3>
                                                     <p class="carousel__subtitle fw-normal"><?= esc_html(get_post_meta(get_the_ID(), 'bottle_name', true)) ?></p>
                                                 </div>
-                                                <div class="carousel-overlay d-flex flex-column justify-content-center">
+                                                <div class="carousel-overlay d-flex flex-column justify-content-start">
                                                     <h3 class="carousel__titleoverlay fw-normal"><?php the_title(); ?></h3>
                                                     <p class="carousel__subtitleoverlay fw-normal"><?= esc_html(get_post_meta(get_the_ID(), 'bottle_name', true)) ?></p>
                                                     <?php
@@ -99,7 +99,9 @@ $terms = get_terms(array(
                                                             <?php endforeach; ?>
                                                         </ul>
                                                     <?php endif; ?>
+                                                    <p class="carousel__region"><?= esc_html(get_post_meta(get_the_ID(), 'region', true)) ?></p>
                                                     <p class="carousel__viewproduct">View product</p>
+                                                    <i class="icon-long-arrow-right"></i>
                                                 </div>
                                             </div>
                                         <?php endif; ?>
