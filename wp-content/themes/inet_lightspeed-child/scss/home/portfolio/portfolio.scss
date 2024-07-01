@@ -124,7 +124,7 @@
     background-color: rgba(48, 41, 33, 0.9);;
     opacity: 0;
     transition: opacity 0.3s ease;
-    padding-top: pxToRem(226);
+    padding-top: 40%;
   }
 
   .carousel__title {
@@ -226,8 +226,22 @@
 }
 
 //Media Queries
+@media screen and (min-width: 390px) {
+  .portfolio {
+    .carousel-overlay {
+      padding-top: 60%;
+    }
+  }
+}
+
 @media screen and (min-width: 1025px) {
   .drink-categories {
     margin-bottom: pxToRem(0);
+  }
+
+  .portfolio {
+    .carousel-overlay {
+      padding-top: pxToRem(226);
+    }
   }
 }

@@ -28,7 +28,7 @@ function processDate($dateString)
                 <p class="events__content"><?= $content ?></p>
                 <div class="row w-100">
                     <div class="col-md-12 col-lg-6">
-                        <a href="#" class="d-flex gap-1 align-items-center fw-bold text-uppercase welcome__anchorlink">View
+                        <a href="#" class="d-flex gap-1 align-items-center fw-bold text-uppercase welcome__anchorlink mb-1">View
                             All Upcoming Events<i
                                     class="icon-long-arrow-right"></i></a>
                     </div>
@@ -40,7 +40,7 @@ function processDate($dateString)
                 </div>
 
             </section>
-            <section class="col-lg-5 events__list">
+            <section class="col-lg-5 events__list mt-0">
                 <?php
                 if ($repeaterRows):
                     foreach ($repeaterRows as $id => $row):

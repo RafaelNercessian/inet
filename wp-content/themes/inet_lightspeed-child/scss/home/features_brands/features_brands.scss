@@ -2,7 +2,7 @@
 
 .featuredbrands {
   background: $black-2;
-  padding-top: pxToRem(171);
+  padding-top: pxToRem(80);
   padding-bottom: pxToRem(105);
   margin-top: pxToRem(95);
 }
@@ -90,6 +90,7 @@
 //Media Queries
 @media screen and (min-width: 1025px) {
   .featuredbrands {
+    padding-top: pxToRem(171);
     .featured-product-image {
       max-height: pxToRem(570);
     }

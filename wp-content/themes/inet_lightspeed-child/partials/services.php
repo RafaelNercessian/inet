@@ -10,7 +10,7 @@ $mainImageId = esc_html(get_sub_field('main_image')['id']);
             <section class="content d-flex flex-column justify-content-center align-items-start col-md-6 col-12 px-2">
                 <h2 class="services__title"><?= $title ?></h2>
                 <h3 class="services__subtitle"><?= $subtitle ?></h3>
-                <p class="services__content"><?= $content ?></p>
+                <p class="services__content mb-1"><?= $content ?></p>
                 <div class="row w-100 mb-3 mb-md-0">
                     <div class="col-12 col-lg-6">
                         <a href="#" class="d-flex gap-1 align-items-center fw-bold text-uppercase services__anchorlink">Our

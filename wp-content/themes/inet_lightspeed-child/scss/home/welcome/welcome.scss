@@ -10,6 +10,8 @@
 .welcome__title{
   font-family: $font-family-primary;
   max-width: 45rem;
+  color: $primary;
+  margin-bottom: 2rem;
 }
 
 .welcome__content,
@@ -21,16 +23,24 @@
   line-height: 1.9rem !important;
 }
 
+.welcome__subtitle{
+  line-height: pxToRem(48);
+  margin-bottom: 2rem;
+}
+
 .welcome__anchorlink {
+  margin-bottom: pxToRem(80);
   &:hover {
     color: $secondary;
   }
 }
 
-
 //Media queries
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .welcome {
     margin-top: pxToRem(121);
+  }
+  .welcome__anchorlink {
+    margin-bottom: 0;
   }
 }
