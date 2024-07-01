@@ -23,9 +23,9 @@ $wineImageId = esc_html(get_sub_field('wine')['id']);
                 </div>
             </div>
         </section>
-        <section class="col-md-5 col-12 offset-1 hero__containerimage">
+        <section class="col-md-5 offset-md-1 col-12 hero__containerimage p-0">
             <section class="row d-flex align-items-end">
-                <section class="col-md-10 offset-md-0 col-6 offset-6 hero__image">
+                <section class="col-md-10 offset-md-0 col-6 offset-7 mt-n4 mt-md-0 p-0 hero__contentimage">
                     <?= wp_get_attachment_image($wineImageId, 'large') ?>
                 </section>
                 <section class="d-none col-2 hero__icon d-flex gap-1">

@@ -2,6 +2,7 @@
 
 .hero{
   margin-top: pxToRem(248);
+  overflow-x: hidden;
 }
 
 .hero__imagebackground {
@@ -10,6 +11,10 @@
   right: 0;
   z-index: -1;
   top: 0;
+}
+
+.hero__contentimage{
+  margin-top: -8rem;
 }
 
 .hero__title {
@@ -69,6 +74,11 @@
 
   .hero{
     height: 100vh;
+    margin-top: 0;
+    overflow-x: unset;
+  }
+
+  .hero__contentimage{
     margin-top: 0;
   }
 }
