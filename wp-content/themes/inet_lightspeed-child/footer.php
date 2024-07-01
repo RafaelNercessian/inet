@@ -12,15 +12,15 @@
                     <?php the_custom_logo() ?>
                 </div>
                 <div class="">
-                    <p class="footer__companyname ms-1">Cork+Vine Cellars</p>
+                    <p class="footer__companyname ms-0 ms-xxl-1">Cork+Vine Cellars</p>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="row footer__linkscontainer">
-                <div class="col-12 col-lg-4 col-xxl-2">
+                <div class="col-12 col-lg-4 col-xxl-2 text-center text-lg-start">
                     <h4 class="footer__title text-uppercase">Our products</h4>
-                    <nav class="footer-navigation text-uppercase">
+                    <nav class="footer-navigation text-uppercase text-center text-lg-start">
                         <?php
                         wp_nav_menu(array(
                             'theme_location' => 'footer-menu',
@@ -31,8 +31,9 @@
                     </nav>
                 </div>
                 <div class="col-12 col-lg-4 col-xxl-2">
-                    <h4 class="footer__title text-uppercase fw-bold">Our company</h4>
-                    <nav class="footer-navigation  text-uppercase">
+                    <h4 class="footer__title text-uppercase fw-bold text-center text-lg-start mt-2 mt-lg-0">Our
+                        company</h4>
+                    <nav class="footer-navigation text-uppercase text-center text-lg-start">
                         <?php
                         wp_nav_menu(array(
                             'theme_location' => 'footer-menu-two',
@@ -42,29 +43,30 @@
                         ?>
                     </nav>
                 </div>
-                <div class="col-12 col-lg-4 col-xxl-2">
-                    <h4 class="footer__title text-uppercase fw-bold">Get in touch</h4>
-                    <a class="footer__phone d-block" href="tel:+14034661288">403-466-1288</a>
-                    <a class="footer__email d-block" href="mailto:email@fccellars.com">email@fccellars.com</a>
-                    <div class="footer__socials mt-2 d-flex">
+                <div class="col-12 col-lg-4 col-xxl-2 text-center text-lg-start">
+                    <h4 class="footer__title text-uppercase fw-bold mt-2 mt-lg-0">Get in touch</h4>
+                    <a class="footer__phone d-block text-center text-lg-start" href="tel:+14034661288">403-466-1288</a>
+                    <a class="footer__email d-block text-center text-lg-start" href="mailto:email@fccellars.com">email@fccellars.com</a>
+                    <div class="footer__socials mt-2 d-flex justify-content-center justify-content-lg-start">
                         <i class="icon-twitter"></i>
                         <i class="icon-instagram ms-1"></i>
                         <i class="icon-facebook ms-1"></i>
                     </div>
                 </div>
-                <div class="col-12 col-lg-12 col-xxl-4 mt-4 mt-xxl-0">
-                    <h4 class="footer__title text-uppercase fw-bold">Join Our Team</h4>
+                <div class="col-12 col-lg-12 col-xxl-4 mt-4 mt-xxl-0 text-center text-lg-start ps-0 ps-xxl-4">
+                    <h4 class="footer__title text-uppercase fw-bold ">Join Our Team</h4>
                     <p class="footer__jointeam">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
                         porttitor
                         non dolor a placerat.</p>
-                    <a href="#" class="d-flex gap-1 align-items-center fw-bold text-uppercase footer__anchorlink mt-1">View
+                    <a href="#"
+                       class="d-flex gap-1 align-items-center fw-bold text-uppercase footer__anchorlink mt-2 mt-xxl-1 justify-content-center justify-content-xxl-start">
                         Contact Us<i
                                 class="icon-long-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
-    <section class="container px-md-0 d-flex justify-content-between footer__disclaimer">
+    <section class="container px-md-0 d-flex flex-column align-items-center flex-lg-row justify-content-lg-between footer__disclaimer">
         <div>
             <p class="footer__copyright mb-0">&copy; <?= date('Y') ?> Cork + Vine Cellars | Web design & development by
                 iNet
