@@ -2,7 +2,7 @@
 $title = esc_html(get_sub_field('title'));
 $subtitle = esc_html(get_sub_field('subtitle'));
 ?>
-<section class="featuredbrands my-5">
+<section class="featuredbrands">
     <section class="container row mx-auto featuredbrands__container">
         <section>
             <h2 class="featuredbrands__title"><?= $title ?></h2>
