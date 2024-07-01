@@ -14,17 +14,33 @@
   transform: translateY(-50%);
   background: black;
   color: white;
-  width: 80px;
-  height: 80px;
+  width: 35px;
+  height: 35px;
   border: none;
   cursor: pointer;
   z-index: 10;
 }
 
 .custom-nav-prev {
-  left: -40px;
+  left: 0;
 }
 
 .custom-nav-next {
-  right: -40px;
+  right: 0;
+}
+
+@media screen and (min-width: 1025px) {
+  .custom-nav-prev,
+  .custom-nav-next {
+    width: 80px;
+    height: 80px;
+  }
+
+  .custom-nav-prev {
+    left: -40px;
+  }
+
+  .custom-nav-next {
+    right: -40px;
+  }
 }

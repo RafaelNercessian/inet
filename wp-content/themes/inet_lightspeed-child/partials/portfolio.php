@@ -8,14 +8,14 @@ $terms = get_terms(array(
     'parent' => 0
 )); ?>
 <section class="container portfolio">
-    <section class="row">
+    <section class="row mx-auto">
         <h2 class="portfolio__title"><?= $title ?></h2>
         <h3 class="portfolio__subtitle"><?= $subtitle ?></h3>
         <p class="portfolio__content"><?= $content ?></p>
     </section>
-    <section class="row">
+    <section class="row mx-auto px-0">
         <section class="col-lg-3 portfolio__drinks">
-            <h3 class="portfolio__featuredproductstitle">Featured Products</h3>
+            <h3 class="portfolio__featuredproductstitle text-uppercase">Featured Products</h3>
             <?php if (!empty($terms) && !is_wp_error($terms)): ?>
                 <ul class="drink-categories p-0">
                     <?php foreach ($terms as $term):
@@ -27,7 +27,7 @@ $terms = get_terms(array(
                         $hasChildren = !empty($children) && !is_wp_error($children);
                         ?>
                         <li class="category-item <?= $hasChildren ? 'has-children' : '' ?>">
-                            <span role="button" class="category-name fw-bold d-flex align-items-center">
+                            <span role="button" class="category-name fw-bold d-flex align-items-center text-uppercase">
                                 <?php if ($hasChildren): ?>
                                     <i class="icon-plus"></i>
                                 <?php endif; ?>
@@ -36,7 +36,7 @@ $terms = get_terms(array(
                             <?php if ($hasChildren): ?>
                                 <ul class="subcategory-list p-0" style="display: none;">
                                     <?php foreach ($children as $child): ?>
-                                        <li class="category-child-name"><?= esc_html($child->name) ?></li>
+                                        <li class="category-child-name text-uppercase"><?= esc_html($child->name) ?></li>
                                     <?php endforeach; ?>
                                 </ul>
                             <?php endif; ?>
@@ -48,7 +48,7 @@ $terms = get_terms(array(
         <section class="col-lg-9">
             <section class="owl-carousel-container">
                 <div class="container position-relative">
-                    <div class="owl-carousel portfolio-carousel">
+                    <div class="owl-carousel portfolio-carousel mt-3 mt-lg-0">
                         <?php
                         $args = array(
                             'posts_per_page' => 10, //Let's limit as 10 for now

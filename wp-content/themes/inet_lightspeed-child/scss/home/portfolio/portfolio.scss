@@ -1,6 +1,12 @@
 @import "../../_variables.scss";
 
 .portfolio {
+  margin-top: pxToRem(69);
+
+  .drink-categories {
+    margin-bottom: pxToRem(54);
+  }
+
   .portfolio__title {
     font-family: $font-family-primary;
     color: $primary;
@@ -13,12 +19,19 @@
     color: $primary;
   }
 
+  .portfolio__content {
+    font-size: pxToRem(18);
+    line-height: pxToRem(30);
+  }
+
   .portfolio__subtitle {
     margin-bottom: pxToRem(21);
+    font-size: pxToRem(24);
+    line-height: pxToRem(34);
   }
 
   .portfolio__content {
-    margin-bottom: pxToRem(91) !important;
+    margin-bottom: pxToRem(50);
   }
 
   .portfolio__drinks {
@@ -34,6 +47,8 @@
     font-size: pxToRem(20);
     line-height: pxToRem(30);
     margin-bottom: pxToRem(37);
+    font-weight: 600;
+    color: $primary;
   }
 
   .icon-plus, .icon-minus {
@@ -198,14 +213,21 @@
     text-align: center;
   }
 
-  .icon-long-arrow-right{
+  .icon-long-arrow-right {
     color: var(--bs-white);
     text-align: center;
   }
 
-  .carousel__region{
+  .carousel__region {
     color: var(--bs-white);
     text-align: center;
     font-family: $font-family-secondary;
+  }
+}
+
+//Media Queries
+@media screen and (min-width: 1025px) {
+  .drink-categories {
+    margin-bottom: pxToRem(0);
   }
 }

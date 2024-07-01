@@ -5,7 +5,8 @@ jQuery(document).ready(function ($) {
     featuredbrandscarousel.owlCarousel({
         loop: true,
         margin: 10,
-        nav: true,
+        nav: false,
+        autoHeight: true,
         responsive: {
             0: {
                 items: 1
@@ -30,7 +31,7 @@ jQuery(document).ready(function ($) {
         loop: true,
         margin: 10,
         autoHeight: true,
-        nav: true,
+        nav: false,
         responsive: {
             0: {
                 items: 1
