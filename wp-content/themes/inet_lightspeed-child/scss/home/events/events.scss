@@ -1,17 +1,82 @@
 @import "../../_variables.scss";
 
-.events__backgroundimage{
+.events__wrapper {
+  i[class^="icon-"] {
+    padding-top: 5px;
+  }
+}
+
+.events__title {
+  font-family: $font-family-primary;
+  color: $black-2;
+}
+
+.events__subtitle {
+  font-family: $font-family-secondary;
+  color: $black-2;
+  line-height: pxToRem(34);
+}
+
+.events__content {
+  font-family: $font-family-secondary;
+  color: $black-2;
+  font-size: pxToRem(18);
+  line-height: pxToRem(30);
+  margin-bottom: pxToRem(40) !important;
+}
+
+.event__date,
+.event__address,
+.time__eventone,
+.time__eventtwo,
+.event__date--format {
+  font-family: $font-family-secondary;
+  color: $black-2;
+  font-size: pxToRem(18);
+  line-height: pxToRem(30);
+}
+
+.events__list {
+  margin-top: pxToRem(72) !important;
+}
+
+.events__backgroundimage {
   background: url(./../img/bg_events.webp) $white-2;
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
 }
 
-.events__wrapper{
-  padding-top: pxToRem(230);
-  padding-bottom: pxToRem(237);
+.events__wrapper {
+  padding-top: pxToRem(107);
+  padding-bottom: pxToRem(109);
 }
 
-.time__eventtwo{
+.time__eventtwo {
   margin-top: pxToRem(10);
+}
+
+//Media Queries
+@media screen and (min-width: 1025px) {
+  .events__wrapper {
+    padding-top: pxToRem(230);
+    padding-bottom: pxToRem(237);
+  }
+
+  .events__title,
+  .events__subtitle {
+    margin-bottom: pxToRem(32);
+  }
+
+  .events__subtitle {
+    line-height: pxToRem(50);
+  }
+
+  .events__content {
+    margin-bottom: pxToRem(56) !important;
+  }
+
+  .events__list {
+    margin-top: 0;
+  }
 }
