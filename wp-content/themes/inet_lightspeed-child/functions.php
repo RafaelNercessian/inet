@@ -65,8 +65,9 @@ function lightspeed_child_scripts() {
 	
 	
 	wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri()."/js/bootstrap.bundle.min.js", array('jquery'), '', true );
-	
-	if (is_front_page() && file_exists(get_stylesheet_directory()."/js/front-page.js")) {
+    wp_enqueue_script( 'header', get_stylesheet_directory_uri()."/js/header.js", array('jquery'), '', true );
+
+    if (is_front_page() && file_exists(get_stylesheet_directory()."/js/front-page.js")) {
 		wp_enqueue_script('front-page', get_stylesheet_directory_uri().'/js/front-page.js', array('jquery'), '', true);
 	}
 
