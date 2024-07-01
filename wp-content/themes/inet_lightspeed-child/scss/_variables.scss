@@ -42,7 +42,8 @@ $sm: 641px;
 $md: 769px;
 $lg: 1025px;
 $xl: 1141px;
-$xxl: 1501px;
+$xxl: 1321px;
+$xxxl: 1641px;
 
 /* adjusted breakpoints for above */
 $grid-breakpoints: (
@@ -51,7 +52,8 @@ $grid-breakpoints: (
   md: 769px,
   lg: 1025px,
   xl: 1141px,
-  xxl: 1501px
+  xxl: 1321px,
+  xxxl: 1641px
 );
 
 /* 100% widths look better than "Snapping" IMO */
@@ -60,7 +62,8 @@ $container-max-widths: (
   md: 100%,
   lg: 100%,
   xl: 1140px,
-  xxl: 1500px,
+  xxl: 1320px,
+  xxxl: 1640px,
 );
 
 
