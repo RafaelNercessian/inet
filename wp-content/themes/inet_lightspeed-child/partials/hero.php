@@ -5,7 +5,7 @@ $wineImageId = esc_html(get_sub_field('wine')['id']);
 ?>
 <div class="hero position-relative">
     <section class="container">
-        <div class="row d-flex align-items-center">
+        <div class="row d-flex align-items-center pt-0 pt-lg-5">
             <section class="col-md-6 col-12 hero__containertext">
                 <h1 class="hero__title"><?= $titleHero ?></h1>
                 <h4 class="hero__subtitle fw-normal"><?= $subtitle ?></h4>
@@ -29,7 +29,7 @@ $wineImageId = esc_html(get_sub_field('wine')['id']);
                     <section class="col-md-10 offset-md-0 col-6 offset-7 mt-n4 mt-md-0 p-0 hero__contentimage">
                         <?= wp_get_attachment_image($wineImageId, 'large') ?>
                     </section>
-                    <section class="d-none d-lg-block col-2 hero__icon d-flex gap-1">
+                    <section class="d-none d-xxxl-flex col-2 hero__icon d-flex gap-1">
                         <i class="icon-twitter hero__icon--white"></i>
                         <i class="icon-instagram hero__icon--white"></i>
                         <i class="icon-facebook hero__icon--white"></i>

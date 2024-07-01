@@ -44,11 +44,28 @@
   color: $white-1;
   font-size: pxToRem(18);
   line-height: pxToRem(36);
+  margin-right: 0.8rem;
+  .title {
+    margin-right: 0.8rem;
+  }
 }
 
 .icon-menu {
   font-size: pxToRem(37);
   color: $white-1;
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  font: bold 18px/36px $font-family-secondary;
+  letter-spacing: 0.9px;
+  color: $white-1;
+  font-size: pxToRem(18);
+  line-height: pxToRem(36);
+  .title {
+    margin-right: 0.8rem;
+  }
 }
 
 @media screen and (min-width: 1025px) {
