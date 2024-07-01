@@ -12,7 +12,7 @@
                     <?php the_custom_logo() ?>
                 </div>
                 <div class="">
-                    <p class="footer__companyname ms-0 ms-xxl-1">Cork+Vine Cellars</p>
+                    <p class="footer__companyname ms-0 ms-xxl-1 col-12 col-xxl-2">Cork+Vine Cellars</p>
                 </div>
             </div>
         </div>
@@ -59,7 +59,7 @@
                         porttitor
                         non dolor a placerat.</p>
                     <a href="#"
-                       class="d-flex gap-1 align-items-center fw-bold text-uppercase footer__anchorlink mt-2 mt-xxl-1 justify-content-center justify-content-xxl-start">
+                       class="d-flex gap-1 align-items-center fw-bold text-uppercase footer__anchorlink mt-2 mt-xxl-1 justify-content-center justify-content-lg-start">
                         Contact Us<i
                                 class="icon-long-arrow-right"></i></a>
                 </div>
@@ -68,12 +68,12 @@
     </section>
     <section class="container px-md-0 d-flex flex-column align-items-center flex-lg-row justify-content-lg-between footer__disclaimer">
         <div>
-            <p class="footer__copyright mb-0">&copy; <?= date('Y') ?> Cork + Vine Cellars | Web design & development by
+            <p class="footer__copyright mb-0 text-center text-xxl-start">&copy; <?= date('Y') ?> Cork + Vine Cellars | Web design & development by
                 iNet
                 Media Ltd.
             <p></p>
         </div>
-        <div>
+        <div class="mt-2 mt-lg-0">
             <a class="footer__privacy" href="#">Privacy Policy</a>
         </div>
     </section>

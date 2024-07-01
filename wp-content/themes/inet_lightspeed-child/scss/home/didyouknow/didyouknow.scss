@@ -14,6 +14,7 @@
   font-family: $font-family-secondary;
   margin-bottom: 2rem;
   color: $primary;
+  line-height: pxToRem(40);
 }
 
 .didyouknow__content {
@@ -49,6 +50,7 @@
       font-family: $font-family-secondary;
       margin-bottom: pxToRem(40);
       font-weight: 500;
+      line-height: pxToRem(34) !important;
     }
 
     .carousel__contentcontainer {
@@ -69,6 +71,27 @@
       font-size: pxToRem(16);
       line-height: pxToRem(30);
       gap: 1.3rem;
+    }
+  }
+}
+
+//Media Queries
+@media screen and (min-width: 769px) {
+  .didyouknow__subtitle {
+    font-family: $font-family-secondary;
+    margin-bottom: 2rem;
+    color: $primary;
+    line-height: pxToRem(34);
+  }
+
+
+  .didyouknow-carousel {
+    .carousel__title {
+      color: var(--bs-white);
+      font-family: $font-family-secondary;
+      margin-bottom: pxToRem(40);
+      font-weight: 500;
+      line-height: pxToRem(48) !important;
     }
   }
 }

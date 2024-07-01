@@ -6,17 +6,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   min-height: pxToRem(858);
-  padding-bottom: pxToRem(450)
-}
-
-.services__image {
-  max-width: 400px !important;
 }
 
 .services__containerimage--absolute {
-  picture {
-    position: absolute;
-  }
+  transform: translateY(80px);
 }
 
 .services__title {
@@ -60,9 +53,6 @@
     top: pxToRem(30);
     left: 0;
   }
-  .services__content {
-    margin-bottom: pxToRem(63) !important;
-  }
   .services {
     padding-bottom: 0;
   }
@@ -76,5 +66,13 @@
   }
   .services__image {
     max-width: 100% !important;
+  }
+
+  .services__subtitle {
+    line-height: pxToRem(48);
+  }
+
+  .services__containerimage--absolute {
+    transform: unset;
   }
 }
