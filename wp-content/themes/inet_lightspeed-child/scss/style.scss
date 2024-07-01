@@ -11,21 +11,10 @@
 @import 'bootstrap-5.2.3/_buttons.scss';
 @import 'bootstrap-5.2.3/_reboot.scss';
 @import 'bootstrap-5.2.3/bootstrap-grid.scss';
+@import 'header.scss';
 @import 'footer.scss';
 
 /* Setup */
-#masthead{
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 8000;
-  margin: 0 auto;
-  transition: all 0.222s linear;
-  padding: 1.5rem 0;
-  left: 0;
-  right: 0;
-}
-
 body {
   position:relative;
   color: #111;
@@ -41,13 +30,6 @@ html {
   scroll-behavior: smooth;
   margin: 0;
 }
-
-#masthead {
-    .logo a {
-      display: inline-block !important;
-    }
-}
-
 
 /* Fluid typography with Clamp - Set your min/max in _variables.scss */
 h1, .h1 {
