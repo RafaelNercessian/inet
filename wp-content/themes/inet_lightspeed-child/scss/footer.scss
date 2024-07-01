@@ -77,12 +77,27 @@
   color: var(--bs-white);
 }
 
-.footer__wrapper{
+.footer__wrapper {
   padding-bottom: pxToRem(80);
   border-bottom: 2px solid var(--bs-white);
 }
 
-.footer__disclaimer{
+.footer__disclaimer {
   margin-top: pxToRem(36);
   padding-bottom: pxToRem(34);
+}
+
+
+.footer__companyname {
+  color: var(--bs-white);
+  font-size: pxToRem(24);
+  line-height: pxToRem(43);
+  font-family: $font-family-primary;
+}
+
+@media screen and (min-width: 1321px) {
+  .footer__companyname {
+    font-size: pxToRem(40);
+    line-height: pxToRem(50);
+  }
 }
