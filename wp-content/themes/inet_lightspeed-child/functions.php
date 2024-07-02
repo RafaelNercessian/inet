@@ -48,7 +48,7 @@ function lightspeed_child_styles() {
     $css_file = str_replace(  '.php', '-critical.css', basename($template) );
 
     if (file_exists(get_stylesheet_directory()."/css/".$css_file)) {
-        wp_enqueue_style( $css_handle, get_stylesheet_directory_uri() . '/css/'.$css_file, array('lightspeed-child'), '1.0');
+        wp_enqueue_style( $css_handle, get_stylesheet_directory_uri() . '/css/'.$css_file, array('lightspeed-child'), '1.1');
     }
 
 
@@ -68,7 +68,7 @@ function lightspeed_child_scripts() {
     wp_enqueue_script( 'header', get_stylesheet_directory_uri()."/js/header.js", array('jquery'), '', true );
 
     if (is_front_page() && file_exists(get_stylesheet_directory()."/js/front-page.js")) {
-		wp_enqueue_script('front-page', get_stylesheet_directory_uri().'/js/front-page.js', array('jquery'), '', true);
+		wp_enqueue_script('front-page', get_stylesheet_directory_uri().'/js/front-page.js', array('jquery'), '6.5.6', true);
 	}
 
     
