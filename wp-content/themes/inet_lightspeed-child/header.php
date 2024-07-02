@@ -80,7 +80,7 @@ if (strpos($_SERVER['SERVER_NAME'], '.inetpowered') === false && strpos($_SERVER
                             </a>
                             <a href="#">
                                 <div class="mylist menu">
-                                    <span class="title text-uppercase">Menu</span><i class="icon-menu"></i>
+                                    <span class="title text-uppercase d-none d-md-block">Menu</span><i class="icon-menu"></i>
                                 </div>
                             </a>
                         </div>

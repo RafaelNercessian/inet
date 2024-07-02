@@ -12,14 +12,14 @@
                     <?php the_custom_logo() ?>
                 </div>
                 <div class="">
-                    <p class="footer__companyname ms-0 ms-xxl-1 col-12 col-xxl-2">Cork+Vine Cellars</p>
+                    <p class="footer__companyname ms-0 ms-xxl-1 col-12 col-xxl-2 mt-1 mt-xxl-0">Cork+Vine Cellars</p>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="row footer__linkscontainer">
                 <div class="col-12 col-lg-4 col-xxl-2 text-center text-lg-start">
-                    <h4 class="footer__title text-uppercase">Our products</h4>
+                    <h4 class="footer__title fw-bold text-uppercase">Our products</h4>
                     <nav class="footer-navigation text-uppercase text-center text-lg-start">
                         <?php
                         wp_nav_menu(array(
@@ -53,7 +53,7 @@
                         <i class="icon-facebook ms-1"></i>
                     </div>
                 </div>
-                <div class="col-12 col-lg-12 col-xxl-4 mt-4 mt-xxl-0 text-center text-lg-start ps-0 ps-xxl-4">
+                <div class="col-12 col-lg-12 col-xxl-4 mt-4 mt-xxl-0 text-center text-lg-start ps-xxl-4">
                     <h4 class="footer__title text-uppercase fw-bold ">Join Our Team</h4>
                     <p class="footer__jointeam">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
                         porttitor
